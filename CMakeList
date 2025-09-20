@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.10)
+
+project(DDoSTool)
+
+set(CMAKE_CXX_STANDARD 17)
+
+find_package(CURL REQUIRED)
+
+add_executable(DDoSTool main.cpp)
+
+target_link_libraries(DDoSTool ${CURL_LIBRARIES})
